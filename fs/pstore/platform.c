@@ -342,7 +342,7 @@ static int compress_lzorle(const void *in, void *out, size_t inlen, size_t outle
 {
 	int ret;
 
-	ret = lzo1x_1_compress(in, inlen, out, &outlen, workspace);
+	ret = lzorle1x_1_compress(in, inlen, out, &outlen, workspace);
 	if (ret != LZO_E_OK) {
 		pr_err("lzorle_compress error, ret = %d!\n", ret);
 		return -EIO;
