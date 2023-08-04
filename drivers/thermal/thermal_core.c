@@ -507,7 +507,7 @@ int thermal_zone_get_temp(struct thermal_zone_device *tz, int *temp)
 
 	ret = tz->ops->get_temp(tz, temp);
 
-	if (IS_ENABLED(CONFIG_THERMAL_EMULATION) && tz->emul_temperature) {
+	if ((IS_ENABLED(CONFIG_THERMAL_EMULATION) && tz->emul_temperature) || thermal_bypass_gaming()) {
 		for (count = 0; count < tz->trips; count++) {
 			ret = tz->ops->get_trip_type(tz, count, &type);
 			if (!ret && type == THERMAL_TRIP_CRITICAL) {
@@ -522,8 +522,12 @@ int thermal_zone_get_temp(struct thermal_zone_device *tz, int *temp)
 		 * is below the critical temperature so that the emulation code
 		 * cannot hide critical conditions.
 		 */
-		if (!ret && *temp < crit_temp)
-			*temp = tz->emul_temperature;
+		if (!ret && *temp < crit_temp) {
+			if (thermal_bypass_gaming())
+				*temp = thermal_bypass_gaming();
+			else if (tz->emul_temperature)
+				*temp = tz->emul_temperature;
+		}
 	}
  
 	mutex_unlock(&tz->lock);
