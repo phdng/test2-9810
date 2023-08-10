@@ -1,0 +1,12 @@
+#
+# SMU/FMP controller drivers
+#
+config EXYNOS_FMP
+	tristate "Samsung EXYNOS FMP driver"
+	depends on SCSI_UFS_CRYPTO
+	help
+	  Say yes here to build support for FMP (Flash Memory Protector)
+	  to encrypt and decrypt userdata using inline H/W crypto module.
+	  If unsure, say N.
+
+	  To compile this driver as a module, choose M here

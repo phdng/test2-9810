@@ -1,0 +1,15 @@
+init/Kconfig:1059:warning: choice value used outside its choice group
+init/Kconfig:1062:warning: choice value used outside its choice group
+init/Kconfig:1065:warning: choice value used outside its choice group
+/usr/bin/arm-linux-gnueabi-ld.bfd: warning: arch/arm64/kernel/vdso32/sigreturn.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/arm-linux-gnueabi-ld.bfd: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+mm/.tmp_highmem.o: no symbols
+fs/cifs/.tmp_export.o: no symbols
+fs/sdfat/.tmp_dfr.o: no symbols
+lib/.tmp_bitrev.o: no symbols
+drivers/gud/gud-exynos9810/MobiCoreDriver/.tmp_clock.o: no symbols
+drivers/gud/gud-exynos9810/MobiCoreDriver/.tmp_pm.o: no symbols
+lib/.tmp_nmi_backtrace.o: no symbols
+lib/nmi_backtrace.o: no symbols
+drivers/media/platform/exynos/fimc-is2/.tmp_fimc-is-pipe.o: no symbols
+drivers/net/wireless/bcmdhd_101_16/.tmp_wl_cfgdbg.o: no symbols
