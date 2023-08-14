@@ -1,4 +1,0 @@
-init/Kconfig:1059:warning: choice value used outside its choice group
-init/Kconfig:1062:warning: choice value used outside its choice group
-init/Kconfig:1065:warning: choice value used outside its choice group
-arch/arm64/configs/exynos9810-star2lte_defconfig:783:warning: override: PSTORE_LZO_RLE_COMPRESS changes choice state
