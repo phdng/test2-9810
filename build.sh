@@ -1,4 +1,4 @@
-PATH="/home/rishik/.clang/bin:${PATH}" \
+PATH="/home/rishik/clang/bin:${PATH}" \
 make -j6 O=out \
  	ARCH=arm64 \
 	CC=clang \
