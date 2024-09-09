@@ -17,7 +17,7 @@ fi
 rm -rf drivers/kernelsu
 mkdir -p drivers/kernelsu
 cd drivers/kernelsu
-wget -q -O - https://github.com/$AUTHOR/$REPO/archive/refs/heads/main.tar.gz | tar -xz --strip=2 "$REPO-main/kernel"
+wget -q -O - https://github.com/$AUTHOR/$REPO/archive/refs/tags/v0.9.5.tar.gz | tar -xz --strip=2 "$REPO-main/kernel"
 echo $VERSION >> .version
 touch .check
 
